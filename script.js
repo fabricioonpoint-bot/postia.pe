@@ -1,5 +1,5 @@
 const GOOGLE_APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxXMrzEDOykRBifgB-wo-5s0cpvo9stwFHvka60E34YB2SMOak9ZU1zTATzosRtowi55A/exec";
+  "https://script.google.com/macros/s/AKfycbyHinIXc2ijigF_nFmw98gtPJrv8EElBXUBxzqgYadAipIRBll4XrbwsFswxzzlgoWO/exec";
 const SUCCESS_MESSAGE =
   "Gracias por registrarte. Te contactaremos pronto para participar en el lanzamiento de POST IA.";
 
