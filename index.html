@@ -9,6 +9,25 @@
     />
     <meta name="theme-color" content="#f4f7fb" />
     <title>POST IA | Marketing que trabaja contigo</title>
+    <link rel="canonical" href="https://fabricioonpoint-bot.github.io/postia.pe/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- Vista previa al compartir (WhatsApp, Facebook, LinkedIn, X) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="POST IA" />
+    <meta property="og:title" content="POST IA | Tu agente de marketing con IA para MYPES" />
+    <meta
+      property="og:description"
+      content="Analiza tu negocio, crea campañas y mantiene activas tus redes para que vendas más sin aumentar tu carga de trabajo."
+    />
+    <meta property="og:url" content="https://fabricioonpoint-bot.github.io/postia.pe/" />
+    <meta property="og:image" content="https://fabricioonpoint-bot.github.io/postia.pe/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" as="image" href="post-ia-agent-hero.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,25 +42,38 @@
         <span class="brand-symbol" aria-hidden="true">P</span>
         <span>POST IA</span>
       </a>
-      <nav class="desktop-nav" aria-label="Navegación principal">
+      <nav class="desktop-nav" id="mainNav" aria-label="Navegación principal">
         <a href="#problema">Problema</a>
         <a href="#solucion">Solución</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#demo">Demo</a>
+        <a class="nav-cta" href="#registro">Reservar acceso</a>
       </nav>
-      <a class="button button-dark button-small" href="#registro">
-        Reservar acceso <i data-lucide="arrow-up-right"></i>
-      </a>
+      <div class="header-actions">
+        <a class="button button-dark button-small" href="#registro">
+          Reservar acceso <i data-lucide="arrow-up-right"></i>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <main id="inicio">
       <section class="hero">
         <div class="hero-image" aria-hidden="true">
           <img
-            src="post-ia-agent-hero.png"
+            src="post-ia-agent-hero.webp"
             alt=""
-            width="1792"
-            height="896"
+            width="1821"
+            height="864"
+            fetchpriority="high"
           />
           <div class="hero-overlay"></div>
         </div>
@@ -251,10 +283,12 @@
                       <i data-lucide="ellipsis"></i>
                     </div>
                     <img
-                      src="mode21-barberia.png"
+                      src="mode21-barberia.webp"
                       alt="Publicación de la barbería MODE 21: Agenda tu cita"
-                      width="1080"
-                      height="1350"
+                      width="540"
+                      height="675"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div class="social-actions">
                       <span><i data-lucide="heart"></i><i data-lucide="message-circle"></i><i data-lucide="send"></i></span>
@@ -324,13 +358,7 @@
             </ul>
           </div>
 
-          <form
-            class="access-form reveal"
-            id="earlyAccessForm"
-            action="https://script.google.com/macros/s/AKfycbxXMrzEDOykRBifgB-wo-5s0cpvo9stwFHvka60E34YB2SMOak9ZU1zTATzosRtowi55A/exec"
-            method="post"
-            target="formResponse"
-          >
+          <form class="access-form reveal" id="earlyAccessForm" novalidate>
             <div class="form-heading">
               <span>01</span>
               <div><h3>Cuéntanos sobre tu negocio</h3><p>Todos los campos son obligatorios.</p></div>
@@ -375,7 +403,6 @@
             <p class="form-note">Usaremos tus datos únicamente para contactarte sobre POST IA.</p>
             <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>
-          <iframe class="form-response-frame" name="formResponse" title="Respuesta del formulario"></iframe>
         </div>
       </section>
     </main>
@@ -384,10 +411,21 @@
       <div class="section-shell footer-grid">
         <div><a class="brand footer-brand" href="#inicio"><span class="brand-symbol">P</span><span>POST IA</span></a><p>Marketing inteligente para pequeñas empresas.</p></div>
         <nav><strong>Explorar</strong><a href="#problema">Problema</a><a href="#solucion">Solución</a><a href="#beneficios">Beneficios</a><a href="#registro">Acceso anticipado</a></nav>
-        <nav><strong>Redes</strong><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">LinkedIn</a></nav>
+        <nav class="social-nav" aria-label="Redes sociales">
+          <strong>Redes</strong>
+          <a data-social="instagram" target="_blank" rel="noopener">Instagram</a>
+          <a data-social="facebook" target="_blank" rel="noopener">Facebook</a>
+          <a data-social="tiktok" target="_blank" rel="noopener">TikTok</a>
+          <a data-social="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="social-fallback" href="#registro">Únete a la beta</a>
+        </nav>
       </div>
       <div class="section-shell footer-bottom"><span>© 2026 POST IA</span><span>Creado para las MYPES que siguen avanzando.</span></div>
     </footer>
+
+    <a class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83s.7-2 .96-2.28c.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.56.8 1.94.86 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.11.6-.07.16-.18.69-.8.88-1.08.18-.27.36-.23.62-.14.25.09 1.6.76 1.88.9.27.13.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
+    </a>
 
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>
