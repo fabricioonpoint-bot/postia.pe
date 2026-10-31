@@ -38,3 +38,7 @@ Todo lo editable está al inicio de `script.js`, en el bloque `CONFIG`:
 ## Formulario
 
 Envía nombre, negocio, tipo de negocio, WhatsApp, correo y cómo maneja sus redes al Apps Script configurado. Como Apps Script no permite leer la respuesta desde otro dominio, la confirmación se muestra cuando la petición sale correctamente; revisa la hoja de cálculo para confirmar los registros.
+
+## Caché
+
+`index.html` carga `styles.css`, `script.js`, el favicon y la imagen para compartir con `?v=AAAAMMDDHHMM`. Cuando cambies alguno de esos archivos, actualiza ese número para que los visitantes vean la versión nueva sin borrar caché.
