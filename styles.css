@@ -281,7 +281,8 @@ section[id] { scroll-margin-top: 72px; }
 
 /* ---------- App en acción (scroll) ---------- */
 .app-tour { position: relative; padding: clamp(96px, 12vw, 160px) 0 clamp(80px, 10vw, 140px); background: var(--nube); }
-.tour-head { max-width: 760px; margin-bottom: clamp(48px, 7vw, 88px); }
+.tour-head { margin-bottom: clamp(48px, 7vw, 88px); }
+.tour-head h2 { max-width: 760px; }
 .tour-head p { max-width: 34rem; margin-top: 18px; color: var(--texto-suave); font-size: 1.1rem; }
 .tour-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(40px, 7vw, 110px); }
 .tour-phone-wrap { position: sticky; top: 92px; align-self: start; display: grid; justify-items: center; gap: 18px; }
