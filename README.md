@@ -27,13 +27,17 @@ Todo lo editable está al inicio de `script.js`, en el bloque `CONFIG`:
 ## Archivos
 
 - `index.html` — estructura y contenido
-- `styles.css` — estilos (colores y tipografías en `:root`)
-- `script.js` — configuración, menú móvil, demo y formulario
-- `post-ia-agent-hero.webp` — imagen principal
-- `mode21-barberia.webp` — publicación de ejemplo en la demo
+- `styles.css` — estilos con la paleta y tipografía del Manual de identidad v1.0 (Violeta Post, Noche, Cian Lente, Nube · Outfit + DM Sans)
+- `script.js` — configuración, logo animado (obturador), transiciones, pieza 9:16, recorrido de la app y formulario
 - `og-image.jpg` — imagen que aparece al compartir el enlace (WhatsApp, Facebook, LinkedIn)
-- `favicon.svg` — ícono de la pestaña
+- `favicon.svg` — isotipo oficial
 - `.nojekyll`
+
+## Identidad
+
+El isotipo (tarjeta, obturador y chispa) está dibujado en `script.js` con la geometría del manual
+(retícula 512 × 512, diafragma de 6 hojas). Al cargar la página, al pasar el cursor por el logo y al
+saltar entre secciones, el obturador se cierra y se abre en 0,6 s como indica la lámina «El clic».
 
 ## Formulario
 

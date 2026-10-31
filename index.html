@@ -2,413 +2,374 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>POST IA | De una foto a tu próxima campaña</title>
     <meta
       name="description"
-      content="POST IA convierte la foto de tu producto en una campaña completa: publicación, texto y estrategia con la voz de tu negocio. Tú apruebas y programas."
+      content="Sube la foto de tu producto y POST IA prepara la publicación, el texto y la estrategia con la identidad de tu negocio. Tú revisas, apruebas y programas."
     />
-    <meta name="theme-color" content="#f5f7fa" />
-    <title>POST IA | Una foto. Una campaña completa.</title>
+    <meta name="theme-color" content="#0f1729" />
     <link rel="canonical" href="https://fabricioonpoint-bot.github.io/postia.pe/" />
-    <link rel="icon" href="favicon.svg?v=202610301911" type="image/svg+xml" />
+    <link rel="icon" href="favicon.svg?v=202610301924" type="image/svg+xml" />
 
     <!-- Vista previa al compartir (WhatsApp, Facebook, LinkedIn, X) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:site_name" content="POST IA" />
-    <meta property="og:title" content="POST IA | Una foto. Una campaña completa." />
+    <meta property="og:title" content="POST IA | De una foto a tu próxima campaña" />
     <meta
       property="og:description"
-      content="Analiza tu negocio, crea campañas y mantiene activas tus redes para que vendas más sin aumentar tu carga de trabajo."
+      content="Marketing simple para pequeños negocios. Una foto basta: POST IA crea tu publicación con tu marca y tú tienes la última palabra."
     />
     <meta property="og:url" content="https://fabricioonpoint-bot.github.io/postia.pe/" />
-    <meta property="og:image" content="https://fabricioonpoint-bot.github.io/postia.pe/og-image.jpg?v=202610301911" />
+    <meta property="og:image" content="https://fabricioonpoint-bot.github.io/postia.pe/og-image.jpg?v=202610301924" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="preload" as="image" href="post-ia-agent-hero.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=202610301911" />
+    <link rel="stylesheet" href="styles.css?v=202610301924" />
   </head>
-  <body>
+  <body class="is-loading">
+    <!-- Isotipo oficial (Manual de identidad v1.0): tarjeta, obturador y chispa -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <clipPath id="lensClip"><circle cx="248" cy="264" r="168" /></clipPath>
+      </defs>
+    </svg>
+
+    <!-- Obturador: carga inicial y transición entre secciones -->
+    <div class="iris" id="iris" aria-hidden="true">
+      <div class="iris-mark" data-isotipo></div>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#inicio" aria-label="POST IA, ir al inicio">
-        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
-        <span class="brand-word">POST<em>IA</em></span>
+        <span class="brand-mark" data-isotipo></span>
+        <span class="brand-word">POST <em>IA</em></span>
       </a>
-      <nav class="desktop-nav" id="mainNav" aria-label="Navegación principal">
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <a href="#en-accion">La app</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#modulos">Módulos</a>
-        <a href="#demo">Demo</a>
-        <a href="#control">Tú decides</a>
-        <a class="nav-cta" href="#registro">Reservar acceso</a>
+        <a href="#esencia">Tú decides</a>
+        <a class="nav-cta" href="#registro">Quiero probar POST IA</a>
       </nav>
       <div class="header-actions">
-        <a class="button button-dark button-small" href="#registro">
-          Reservar acceso <i data-lucide="arrow-up-right"></i>
-        </a>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Abrir menú"
-        >
+        <a class="button button-small button-violet" href="#registro">Quiero probarlo</a>
+        <button class="menu-toggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
 
     <main id="inicio">
-      <section class="hero">
-        <div class="hero-image" aria-hidden="true">
-          <img
-            src="post-ia-agent-hero.webp"
-            alt=""
-            width="1821"
-            height="864"
-            fetchpriority="high"
-          />
-          <div class="hero-overlay"></div>
-        </div>
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-light" aria-hidden="true"></div>
+        <svg class="rings rings-hero" viewBox="0 0 330 120" aria-hidden="true"><g><circle cx="60" cy="60" r="56" /><circle cx="165" cy="60" r="56" /><circle cx="270" cy="60" r="56" /></g></svg>
 
-        <div class="section-shell hero-inner">
-          <div class="hero-copy reveal">
-            <p class="pill"><span></span> Tu estudio de marketing con IA</p>
-            <h1>Una foto.<br /><span class="h1-accent">Una campaña completa.</span></h1>
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="hero-kicker"><span class="dot"></span> Marketing simple para pequeños negocios</p>
+            <h1 id="heroTitle" class="hero-title">
+              <span class="line"><span>De una foto</span></span>
+              <span class="line"><span>a tu próxima</span></span>
+              <span class="line"><span class="lens-text">campaña.</span></span>
+            </h1>
             <p class="hero-lead">
-              Sube la foto de tu producto y POST IA prepara la publicación, el texto y la
-              estrategia con la voz de tu negocio. Tú revisas, apruebas y la programas en tus redes.
+              Sube la foto de tu producto. POST IA ya conoce tu marca: tus colores, tu tono y tu estilo.
+              Prepara la publicación y tú decides si se publica.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#registro">
-                <i data-lucide="camera"></i> Crear con una foto
+              <a class="button button-violet button-shutter" href="#registro">
+                <span class="shutter-btn" data-isotipo></span> Quiero probar POST IA
               </a>
-              <a class="button button-ghost" href="#como-funciona">
-                <i data-lucide="play"></i> Ver cómo funciona
-              </a>
+              <a class="button button-outline" href="#en-accion"><i data-lucide="smartphone"></i> Ver la app</a>
             </div>
-            <div class="hero-proof">
-              <span><i data-lucide="sparkles"></i> IA con tu esencia</span>
-              <span><i data-lucide="shield-check"></i> Tú apruebas todo</span>
-              <span><i data-lucide="message-circle"></i> Acompañamiento por WhatsApp</span>
-            </div>
+            <ul class="hero-pillars" aria-label="Lo esencial de POST IA">
+              <li><strong>Una foto basta.</strong> Sin diseñadores ni agencias.</li>
+              <li><strong>Habla como tu marca.</strong> Colores, tono y estilo guardados.</li>
+              <li><strong>Tú apruebas.</strong> Nada se publica sin tu revisión.</li>
+            </ul>
           </div>
 
+          <!-- Pieza 9:16 que se reproduce como el video de la marca -->
+          <figure class="reel" id="reel" aria-label="Animación: de la foto de un polo coral a una publicación de Estudio Coral">
+            <div class="reel-progress" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="reel-stage">
+              <div class="reel-scene scene-intro is-active">
+                <div class="reel-logo" data-isotipo></div>
+                <p class="reel-caption">Toma la foto.</p>
+              </div>
+              <div class="reel-scene scene-photo">
+                <div class="photo-raw"><div class="product" data-product></div></div>
+                <p class="reel-caption">Tu producto, tal cual.</p>
+                <span class="flash"></span>
+              </div>
+              <div class="reel-scene scene-piece">
+                <div class="piece">
+                  <span class="piece-glow"></span>
+                  <div class="product" data-product></div>
+                  <span class="tag tag-brand">Estudio Coral</span>
+                  <p class="piece-title">Nuevo <span>drop.</span></p>
+                  <span class="tag tag-price">S/49.90</span>
+                  <span class="tag tag-cta">Pídelo por WhatsApp</span>
+                  <svg class="rings rings-piece" viewBox="0 0 330 120" aria-hidden="true"><g><circle cx="60" cy="60" r="56" /><circle cx="165" cy="60" r="56" /><circle cx="270" cy="60" r="56" /></g></svg>
+                </div>
+              </div>
+              <div class="reel-scene scene-outro">
+                <div class="reel-logo" data-isotipo></div>
+                <p class="outro-word">POST <em>IA</em></p>
+                <p class="outro-line">De una foto a tu próxima campaña.</p>
+              </div>
+            </div>
+            <figcaption class="reel-note">Pieza de ejemplo con la marca demo Estudio Coral.</figcaption>
+            <button class="reel-toggle" type="button" aria-label="Pausar animación"><i data-lucide="pause"></i></button>
+          </figure>
         </div>
+
+        <a class="scroll-cue" href="#en-accion" aria-label="Ir a la app"><span></span></a>
       </section>
 
-      <section class="signal-bar" aria-label="Funciones principales">
-        <div class="section-shell signal-inner">
-          <span>01 · Tu producto</span><i data-lucide="arrow-right"></i>
-          <span>02 · Nuestra IA</span><i data-lucide="arrow-right"></i>
-          <span>03 · Tú decides</span><i data-lucide="arrow-right"></i>
-          <span>04 · Entiendes el resultado</span>
+      <!-- ============ LA APP EN ACCIÓN (scroll) ============ -->
+      <section id="en-accion" class="app-tour" aria-labelledby="tourTitle">
+        <div class="shell tour-head">
+          <h2 id="tourTitle">Así se ve POST IA en tu teléfono.</h2>
+          <p>Baja para recorrer una campaña completa, desde la foto hasta los resultados.</p>
         </div>
-      </section>
 
-      <section id="problema" class="section problem-section">
-        <div class="section-shell">
-          <div class="section-heading split-heading reveal">
-            <div>
-              <p class="eyebrow">El reto diario</p>
-              <h2>Las MYPES no necesitan trabajar más.</h2>
+        <div class="shell tour-grid">
+          <div class="tour-phone-wrap">
+            <div class="phone" id="tourPhone" data-screen="0">
+              <div class="phone-notch"></div>
+              <div class="app-header">
+                <span class="app-brand"><span class="mini-mark" data-isotipo></span><b>POST <em>IA</em></b></span>
+                <span class="app-demo">Demo</span>
+              </div>
+
+              <div class="screens">
+                <!-- 0 · Inicio -->
+                <section class="screen is-active" data-index="0" aria-label="Pantalla de inicio">
+                  <p class="app-date">Viernes, 30 de octubre</p>
+                  <h3 class="app-hello">Hola, <span>Estudio Coral</span></h3>
+                  <p class="app-sub">Tu marketing, en un solo lugar.</p>
+                  <div class="week-card">
+                    <div class="week-top"><span>Panel de la semana</span><span class="chip-ghost">Datos demo</span></div>
+                    <p class="week-title">Una foto.<br /><span>Una campaña completa.</span></p>
+                    <div class="week-stats">
+                      <div><b data-count="972">972</b><small>Alcance</small></div>
+                      <div><b data-count="8">8</b><small>Consultas</small></div>
+                      <div><b>S/20</b><small>Inversión</small></div>
+                    </div>
+                    <div class="week-actions"><span class="app-btn app-btn-violet"><i data-lucide="camera"></i> Crear con una foto</span><span class="app-btn app-btn-glass">Ver demo</span></div>
+                  </div>
+                  <p class="app-section">Todo en una sola app</p>
+                  <div class="app-tiles">
+                    <span><i data-lucide="image-plus"></i>Contenido</span>
+                    <span><i data-lucide="shopping-bag"></i>Catálogo</span>
+                  </div>
+                </section>
+
+                <!-- 1 · Sube tu foto -->
+                <section class="screen" data-index="1" aria-label="Subir la foto del producto">
+                  <p class="app-step">Empieza con tu producto <span>01 / 03</span></p>
+                  <div class="upload">
+                    <div class="product" data-product></div>
+                    <span class="upload-badge"><i data-lucide="check"></i> Foto lista</span>
+                  </div>
+                  <div class="app-fields">
+                    <div><small>Producto</small><b>Polo Coral</b></div>
+                    <div><small>Precio · Stock</small><b>S/49.90 · 18</b></div>
+                  </div>
+                  <p class="app-label">¿Qué quieres lograr?</p>
+                  <div class="app-chips"><span class="on">Recibir consultas</span><span>Dar a conocer</span><span>Promocionar</span></div>
+                  <span class="app-btn app-btn-violet app-btn-block"><i data-lucide="sparkles"></i> Generar campaña</span>
+                </section>
+
+                <!-- 2 · Propuesta -->
+                <section class="screen" data-index="2" aria-label="Propuesta visual">
+                  <p class="app-step">Propuesta visual <span>02 / 03</span></p>
+                  <div class="ig-post">
+                    <div class="ig-head"><span class="ig-avatar">EC</span><b>estudiocoral</b><small>Vista previa · Instagram</small></div>
+                    <div class="piece piece-mini">
+                      <span class="piece-glow"></span>
+                      <div class="product" data-product></div>
+                      <span class="tag tag-brand">Estudio Coral</span>
+                      <p class="piece-title">Nuevo <span>drop.</span></p>
+                      <span class="tag tag-price">S/49.90</span>
+                      <span class="tag tag-cta">Pídelo por WhatsApp</span>
+                    </div>
+                    <p class="ig-copy"><b>estudiocoral</b> Un toque de color para todos tus días. Descubre el Polo Coral por S/49.90. Escríbenos y encuentra tu talla.</p>
+                  </div>
+                  <div class="app-chips app-chips-sm"><span>Diseño de marca</span><span>Texto editable</span><span>Sin ofertas inventadas</span></div>
+                </section>
+
+                <!-- 3 · Programar -->
+                <section class="screen" data-index="3" aria-label="Aprobar y programar">
+                  <p class="app-step">Tú apruebas la campaña <span>03 / 03</span></p>
+                  <h4 class="app-h4">Elige el mejor momento</h4>
+                  <div class="slots">
+                    <span><small>Vie</small>31</span><span class="on"><small>Sáb</small>1</span><span><small>Dom</small>2</span><span><small>Lun</small>3</span>
+                  </div>
+                  <div class="times"><span>12:30 p. m.</span><span class="on">7:00 p. m.</span><span>9:00 p. m.</span></div>
+                  <div class="channel-row"><span class="on"><i data-lucide="instagram"></i> Instagram</span><span class="on"><i data-lucide="facebook"></i> Facebook</span></div>
+                  <div class="approve-card">
+                    <i data-lucide="shield-check"></i>
+                    <p><b>Revisé la imagen y el texto.</b><br />Nada se publica sin tu aprobación.</p>
+                  </div>
+                  <span class="app-btn app-btn-violet app-btn-block"><i data-lucide="calendar-check"></i> Aprobar y programar</span>
+                  <p class="app-fine">Fechas y horas de Lima · Programación de demostración</p>
+                </section>
+
+                <!-- 4 · Resultados -->
+                <section class="screen" data-index="4" aria-label="Resultados de la campaña">
+                  <p class="app-step">Entiende lo que está pasando</p>
+                  <div class="reach-card">
+                    <small>Alcance de la campaña</small>
+                    <p><b data-count="972">972</b> personas</p>
+                    <svg class="trend" viewBox="0 0 220 60" aria-hidden="true"><path d="M2 54 C30 50 40 40 62 42 S96 26 118 30 S152 14 172 18 S204 6 218 4" /></svg>
+                    <span class="reach-meta"><i></i> Campaña de ejemplo · Meta</span>
+                  </div>
+                  <div class="funnel">
+                    <div style="--w:100%"><span>Alcance</span><b>972</b></div>
+                    <div style="--w:46%"><span>Clics</span><b>41</b></div>
+                    <div style="--w:22%"><span>Conversaciones</span><b>8</b></div>
+                  </div>
+                  <div class="insight">
+                    <span class="insight-orb"><i data-lucide="sparkles"></i></span>
+                    <p><b>Mira las consultas, no solo los likes.</b> Responde, aprende y ajusta tu próximo mensaje.</p>
+                  </div>
+                  <p class="app-fine">Datos simulados para explicar el servicio.</p>
+                </section>
+              </div>
+
+              <nav class="app-tabbar" aria-hidden="true">
+                <span class="on"><i data-lucide="house"></i>Inicio</span>
+                <span class="tab-create"><i data-lucide="plus"></i></span>
+                <span><i data-lucide="calendar-days"></i>Campañas</span>
+                <span><i data-lucide="chart-column"></i>Métricas</span>
+                <span><i data-lucide="layout-grid"></i>Más</span>
+              </nav>
+              <span class="phone-shutter" aria-hidden="true"></span>
             </div>
-            <div>
-              <h2 class="accent-heading">Necesitan automatizar mejor.</h2>
-              <p>
-                Mantener una presencia digital constante no debería quitarte tiempo
-                para atender clientes, mejorar tu producto o hacer crecer el negocio.
-              </p>
+            <div class="tour-dots" role="tablist" aria-label="Pantallas de la app">
+              <button role="tab" aria-selected="true" data-go="0" aria-label="Inicio"></button>
+              <button role="tab" aria-selected="false" data-go="1" aria-label="Sube tu foto"></button>
+              <button role="tab" aria-selected="false" data-go="2" aria-label="Propuesta"></button>
+              <button role="tab" aria-selected="false" data-go="3" aria-label="Programar"></button>
+              <button role="tab" aria-selected="false" data-go="4" aria-label="Resultados"></button>
             </div>
           </div>
 
-          <div class="problem-grid">
-            <article class="problem-card reveal">
-              <span class="card-number">01</span>
-              <i data-lucide="clock-3"></i>
-              <h3>Poco tiempo para publicar</h3>
-              <p>El contenido siempre queda para después cuando el negocio exige atención.</p>
-            </article>
-            <article class="problem-card reveal">
-              <span class="card-number">02</span>
-              <i data-lucide="trending-down"></i>
-              <h3>Redes abandonadas</h3>
-              <p>La inconsistencia reduce visibilidad, confianza y oportunidades de venta.</p>
-            </article>
-            <article class="problem-card reveal">
-              <span class="card-number">03</span>
-              <i data-lucide="wallet-cards"></i>
-              <h3>Una agencia es costosa</h3>
-              <p>Un equipo completo de marketing está fuera del alcance de muchas MYPES.</p>
-            </article>
-            <article class="problem-card reveal">
-              <span class="card-number">04</span>
-              <i data-lucide="chart-no-axes-combined"></i>
-              <h3>Resultados poco claros</h3>
-              <p>Muchas herramientas muestran números, pero no explican qué hacer después.</p>
-            </article>
-          </div>
-
-          <div class="stat-strip reveal">
-            <i data-lucide="message-circle-heart"></i>
-            <p>Mira las consultas, no solo los likes.</p>
-            <span>POST IA te muestra cuántas personas te escribieron y qué preguntaron, para que mejores el próximo mensaje.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="como-funciona" class="section journey-section">
-        <div class="section-shell">
-          <div class="section-heading centered reveal">
-            <p class="eyebrow">Así funciona POST IA</p>
-            <h2>De producto a protagonista en cuatro pasos.</h2>
-            <p>Contenido con tu identidad. Publicidad bajo tu control.</p>
-          </div>
-
-          <ol class="journey">
-            <li class="journey-step reveal">
-              <span class="step-tag">01 · La idea empieza contigo</span>
-              <div class="step-icon"><i data-lucide="image-plus"></i></div>
-              <h3>Tu producto ya tiene una historia.</h3>
-              <p>Sube una foto y añade nombre, precio y disponibilidad. Nada más.</p>
-              <div class="step-chip"><i data-lucide="camera"></i> JPG, PNG o WebP</div>
+          <ol class="tour-steps" id="como-funciona">
+            <li class="tour-step is-active" data-step="0">
+              <span class="step-num">Inicio</span>
+              <h3>Tu semana, de un vistazo.</h3>
+              <p>Al abrir la app ves cuántas personas te vieron, cuántas te escribieron y qué tienes pendiente. Desde ahí creas tu próxima campaña.</p>
             </li>
-            <li class="journey-step reveal">
-              <span class="step-tag">02 · Tu marca, bien contada</span>
-              <div class="step-icon"><i data-lucide="wand-sparkles"></i></div>
-              <h3>Una propuesta visual y un mensaje.</h3>
-              <p>La IA usa la memoria de tu marca: tus colores, tu tono y tus reglas, como no inventar ofertas.</p>
-              <div class="step-chip"><i data-lucide="palette"></i> Imagen + texto + estrategia</div>
+            <li class="tour-step" data-step="1">
+              <span class="step-num">Paso 1 · Tu producto</span>
+              <h3>Una foto basta.</h3>
+              <p>Sube la foto que ya tienes en el teléfono, añade el precio y el stock, y elige qué quieres lograr: consultas, darte a conocer o promocionar.</p>
             </li>
-            <li class="journey-step reveal">
-              <span class="step-tag">03 · Tú decides</span>
-              <div class="step-icon"><i data-lucide="circle-check-big"></i></div>
-              <h3>Apruebas, editas o lo dejas para después.</h3>
-              <p>Programa en Instagram y Facebook al mejor horario. Si quieres más alcance, suma publicidad opcional.</p>
-              <div class="step-chip"><i data-lucide="calendar-clock"></i> Aprobar y programar</div>
+            <li class="tour-step" data-step="2">
+              <span class="step-num">Paso 2 · Nuestra IA</span>
+              <h3>De producto a protagonista.</h3>
+              <p>POST IA arma la pieza con tu memoria de marca: tus colores, tu tono y tus reglas. El texto es editable y nunca inventa ofertas.</p>
             </li>
-            <li class="journey-step reveal">
-              <span class="step-tag">04 · Entiendes el resultado</span>
-              <div class="step-icon"><i data-lucide="chart-line"></i></div>
+            <li class="tour-step" data-step="3">
+              <span class="step-num">Paso 3 · Tú decides</span>
+              <h3>La última palabra es tuya.</h3>
+              <p>Revisas, apruebas y eliges el horario para Instagram y Facebook. Si quieres más alcance, sumas publicidad opcional, separada de tu suscripción.</p>
+            </li>
+            <li class="tour-step" data-step="4">
+              <span class="step-num">Paso 4 · Entiendes el resultado</span>
               <h3>Del alcance a la conversación.</h3>
-              <p>Ves alcance, consultas e inversión en lenguaje simple, con el siguiente paso sugerido.</p>
-              <div class="step-chip"><i data-lucide="lightbulb"></i> Responde. Aprende. Ajusta.</div>
+              <p>Ves alcance, clics y consultas en lenguaje simple, con una sugerencia clara para tu siguiente publicación.</p>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="modulos" class="section modules-section">
-        <div class="section-shell">
-          <div class="section-heading split-heading reveal">
-            <div>
-              <p class="eyebrow">Todo en una sola app</p>
-              <h2>Tu marketing, en un solo lugar.</h2>
-            </div>
-            <p>Seis herramientas que trabajan juntas para que publiques con constancia, respondas rápido y entiendas qué funciona.</p>
+      <!-- ============ MÓDULOS ============ -->
+      <section id="modulos" class="modules" aria-labelledby="modTitle">
+        <div class="shell">
+          <div class="modules-head">
+            <h2 id="modTitle">Seis herramientas.<br />Una sola app.</h2>
+            <p>Todo lo que una pequeña marca necesita para publicar con constancia, responder rápido y entender qué funciona.</p>
           </div>
-
-          <div class="modules-grid">
-            <article class="module-card reveal">
-              <span class="module-icon tone-violet"><i data-lucide="image-plus"></i></span>
+          <ul class="module-list">
+            <li class="module" data-tone="violet">
+              <span class="module-ico"><i data-lucide="image-plus"></i></span>
               <h3>Estudio creativo</h3>
               <p>Convierte una foto en una publicación lista para revisar, en formato post o historia.</p>
-            </article>
-            <article class="module-card reveal">
-              <span class="module-icon tone-cyan"><i data-lucide="shopping-bag"></i></span>
+            </li>
+            <li class="module" data-tone="cyan">
+              <span class="module-ico"><i data-lucide="shopping-bag"></i></span>
               <h3>Catálogo online</h3>
-              <p>Una página de venta con tus productos, preguntas frecuentes y botón para consultar por WhatsApp.</p>
-            </article>
-            <article class="module-card reveal">
-              <span class="module-icon tone-coral"><i data-lucide="messages-square"></i></span>
+              <p>Una página de venta con tus productos y un botón para consultar por WhatsApp.</p>
+            </li>
+            <li class="module" data-tone="violet">
+              <span class="module-ico"><i data-lucide="messages-square"></i></span>
               <h3>Respuestas con tu estilo</h3>
-              <p>Tu asistente sugiere respuestas a las consultas de clientes. Siempre puedes editarlas antes de enviar.</p>
-            </article>
-            <article class="module-card reveal">
-              <span class="module-icon tone-violet"><i data-lucide="calendar-days"></i></span>
-              <h3>Calendario de publicaciones</h3>
-              <p>Borradores, revisión y programación en un solo lugar, con fechas y horas de Lima.</p>
-            </article>
-            <article class="module-card reveal">
-              <span class="module-icon tone-cyan"><i data-lucide="megaphone"></i></span>
+              <p>Tu asistente sugiere respuestas a cada consulta. Las editas antes de enviarlas.</p>
+            </li>
+            <li class="module" data-tone="cyan">
+              <span class="module-ico"><i data-lucide="calendar-days"></i></span>
+              <h3>Calendario</h3>
+              <p>Borradores, revisión y programación en un solo lugar, con horas de Lima.</p>
+            </li>
+            <li class="module" data-tone="violet">
+              <span class="module-ico"><i data-lucide="megaphone"></i></span>
               <h3>Publicidad con dirección</h3>
-              <p>Cada sol con un objetivo. Anuncios opcionales en Meta, con el presupuesto separado de tu suscripción.</p>
-            </article>
-            <article class="module-card reveal">
-              <span class="module-icon tone-coral"><i data-lucide="video"></i></span>
+              <p>Cada sol con un objetivo. Anuncios opcionales en Meta; tú eliges cuánto invertir.</p>
+            </li>
+            <li class="module" data-tone="cyan">
+              <span class="module-ico"><i data-lucide="clapperboard"></i></span>
               <h3>Director de bolsillo</h3>
               <p>De «no sé qué grabar» a una historia lista para editar: guion y encuadre en tres tomas.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="demo" class="section demo-section">
-        <div class="section-shell">
-          <div class="section-heading centered reveal">
-            <p class="eyebrow">POST IA en acción</p>
-            <h2>De una promoción a una campaña completa.</h2>
-            <p>Así se ve una campaña creada en POST IA Studio para una barbería.</p>
-          </div>
-
-          <div class="studio-window reveal">
-            <header class="studio-topbar">
-              <div class="studio-logo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span><strong>POST IA Studio</strong></div>
-              <div class="campaign-status"><i></i> Campaña guardada</div>
-              <div class="studio-actions">
-                <button class="icon-button" aria-label="Vista previa"><i data-lucide="eye"></i></button>
-                <button class="publish-button"><i data-lucide="send"></i> Programar</button>
-              </div>
-            </header>
-
-            <div class="studio-layout">
-              <aside class="studio-nav">
-                <button aria-label="Inicio"><i data-lucide="home"></i></button>
-                <button class="active" aria-label="Crear campaña"><i data-lucide="wand-sparkles"></i></button>
-                <button aria-label="Calendario"><i data-lucide="calendar-days"></i></button>
-                <button aria-label="Métricas"><i data-lucide="chart-no-axes-combined"></i></button>
-                <button aria-label="Configuración"><i data-lucide="settings-2"></i></button>
-              </aside>
-
-              <section class="ai-workspace">
-                <div class="workspace-heading">
-                  <span class="agent-avatar"><i data-lucide="sparkles"></i></span>
-                  <div><strong>Agente POST IA</strong><small>Creando para MODE 21</small></div>
-                </div>
-
-                <div class="chat-thread">
-                  <div class="chat-bubble user-message">
-                    Crea una campaña para llenar la agenda de la barbería esta semana.
-                  </div>
-                  <div class="chat-bubble agent-message">
-                    <span><i data-lucide="sparkles"></i></span>
-                    <p>Preparé una publicación enfocada en atención personalizada, seguridad y estilo.</p>
-                  </div>
-                  <div class="agent-plan">
-                    <div><i data-lucide="check"></i><span><strong>Objetivo</strong><small>Reservas por WhatsApp</small></span></div>
-                    <div><i data-lucide="check"></i><span><strong>Público</strong><small>Hombres de 18 a 40 años</small></span></div>
-                    <div><i data-lucide="check"></i><span><strong>Mejor horario</strong><small>Mañana · 7:00 PM</small></span></div>
-                  </div>
-                </div>
-
-                <div class="prompt-box">
-                  <span>Solicita un cambio a tu agente...</span>
-                  <button aria-label="Enviar instrucción"><i data-lucide="arrow-up"></i></button>
-                </div>
-              </section>
-
-              <section class="creative-canvas">
-                <header>
-                  <div>
-                    <small>Vista previa</small>
-                    <strong>Publicación MODE 21</strong>
-                  </div>
-                  <div class="format-switcher" aria-label="Formato de la publicación">
-                    <button class="active" data-format="feed">Post</button>
-                    <button data-format="story">Historia</button>
-                  </div>
-                </header>
-
-                <div class="phone-stage">
-                  <div class="social-phone" data-preview-format="feed">
-                    <div class="phone-camera"></div>
-                    <div class="social-header">
-                      <span class="mode-avatar">M21</span>
-                      <div><strong>mode21.pe</strong><small>Contenido patrocinado</small></div>
-                      <i data-lucide="ellipsis"></i>
-                    </div>
-                    <img
-                      src="mode21-barberia.webp"
-                      alt="Publicación de la barbería MODE 21: Agenda tu cita"
-                      width="540"
-                      height="675"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="social-actions">
-                      <span><i data-lucide="heart"></i><i data-lucide="message-circle"></i><i data-lucide="send"></i></span>
-                      <i data-lucide="bookmark"></i>
-                    </div>
-                    <p><strong>mode21.pe</strong> Agenda tu cita y renueva tu estilo esta semana.</p>
-                  </div>
-                </div>
-              </section>
-
-              <aside class="campaign-panel">
-                <div class="panel-heading"><strong>Configuración</strong><button aria-label="Cerrar"><i data-lucide="x"></i></button></div>
-                <div class="campaign-field">
-                  <span>Campaña</span>
-                  <strong>Agenda tu cita</strong>
-                </div>
-                <div class="campaign-field">
-                  <span>Canales</span>
-                  <div class="channel-pills"><i data-lucide="instagram"></i><span>Instagram</span><span>Facebook</span></div>
-                </div>
-                <div class="campaign-field">
-                  <span>Texto generado</span>
-                  <p>En cada corte hay técnica, estilo y pasión. Reserva tu cita y recibe atención personalizada.</p>
-                </div>
-                <div class="campaign-field">
-                  <span>Llamada a la acción</span>
-                  <button class="select-like">Reservar por WhatsApp <i data-lucide="chevron-down"></i></button>
-                </div>
-                <div class="schedule-box">
-                  <i data-lucide="calendar-clock"></i>
-                  <div><span>Programado</span><strong>Mañana · 7:00 PM</strong></div>
-                </div>
-                <div class="prediction">
-                  <div><span>Alcance estimado</span><strong>8.4K</strong></div>
-                  <div><span>Interacciones</span><strong>+24%</strong></div>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="manifesto">
-        <div class="section-shell manifesto-inner reveal">
-          <i data-lucide="quote"></i>
-          <blockquote>
-            “Las pequeñas empresas no necesitan más herramientas.
-            <strong>Necesitan una IA que trabaje por ellas.</strong>”
-          </blockquote>
-          <p>Ese es el futuro que estamos construyendo con POST IA.</p>
-        </div>
-      </section>
-
-      <section id="control" class="section control-section">
-        <div class="section-shell control-grid">
-          <div class="control-copy reveal">
-            <p class="eyebrow">Un impulso. Bajo tu control.</p>
-            <h2>La IA propone. <span class="h2-accent">Tú tienes la última palabra.</span></h2>
-            <p>POST IA no publica nada sin tu aprobación ni promete resultados que no puede garantizar. Te ayuda a decidir mejor.</p>
-          </div>
-          <ul class="control-list">
-            <li class="reveal"><i data-lucide="shield-check"></i><div><strong>Apruebas cada publicación</strong><span>Revisa la imagen y edita el texto antes de programar.</span></div></li>
-            <li class="reveal"><i data-lucide="brain"></i><div><strong>Memoria de tu marca</strong><span>Colores, tono y reglas, como no inventar descuentos.</span></div></li>
-            <li class="reveal"><i data-lucide="wallet"></i><div><strong>Publicidad opcional</strong><span>Tú eliges cuánto invertir; va separado de la suscripción.</span></div></li>
-            <li class="reveal"><i data-lucide="message-circle"></i><div><strong>No lo haces solo</strong><span>Te acompañamos por WhatsApp en tu primera campaña.</span></div></li>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section id="registro" class="section registration-section">
-        <div class="section-shell registration-grid">
-          <div class="registration-copy reveal">
-            <p class="eyebrow">Acceso anticipado</p>
-            <h2>Haz crecer tu negocio, no tu lista de pendientes.</h2>
-            <p>
-              Déjanos tus datos para validar la plataforma y darte acceso prioritario
-              cuando lancemos la versión beta de POST IA.
-            </p>
+      <!-- ============ ESENCIA ============ -->
+      <section id="esencia" class="essence" aria-labelledby="essTitle">
+        <div class="shell">
+          <h2 id="essTitle">Con tu esencia.<br /><span>Bajo tu control.</span></h2>
+          <div class="essence-grid">
+            <article>
+              <i data-lucide="camera"></i>
+              <h3>Simple</h3>
+              <p>El flujo empieza con lo que ya tienes en el teléfono. Sin diseñadores ni agencias.</p>
+            </article>
+            <article>
+              <i data-lucide="palette"></i>
+              <h3>Cercana</h3>
+              <p>Tu memoria de marca guarda colores, tono y estilo, para que cada pieza suene a ti.</p>
+            </article>
+            <article class="essence-dark">
+              <i data-lucide="shield-check"></i>
+              <h3>Bajo tu control</h3>
+              <p>Nada se publica ni se invierte sin tu revisión. Te acompañamos por WhatsApp en tu primera campaña.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REGISTRO ============ -->
+      <section id="registro" class="register" aria-labelledby="regTitle">
+        <div class="hero-light hero-light-low" aria-hidden="true"></div>
+        <div class="shell register-grid">
+          <div class="register-copy">
+            <h2 id="regTitle">Tu próxima campaña empieza con una foto.</h2>
+            <p>Déjanos tus datos y te damos acceso prioritario cuando abramos la beta de POST IA.</p>
             <ul>
               <li><i data-lucide="check"></i> Participación prioritaria en la beta</li>
               <li><i data-lucide="check"></i> Acompañamiento por WhatsApp en tus primeras campañas</li>
@@ -416,12 +377,11 @@
             </ul>
           </div>
 
-          <form class="access-form reveal" id="earlyAccessForm" novalidate>
+          <form class="access-form" id="earlyAccessForm" novalidate>
             <div class="form-heading">
-              <span>01</span>
+              <span class="form-mark" data-isotipo></span>
               <div><h3>Cuéntanos sobre tu negocio</h3><p>Todos los campos son obligatorios.</p></div>
             </div>
-
             <div class="field-row">
               <label>Nombre completo<input name="fullName" autocomplete="name" placeholder="Tu nombre completo" required /></label>
               <label>Nombre del negocio<input name="businessName" autocomplete="organization" placeholder="Nombre de tu negocio" required /></label>
@@ -455,7 +415,7 @@
                 <option>No de forma constante</option>
               </select>
             </label>
-            <button class="button button-primary submit-button" type="submit">
+            <button class="button button-violet submit-button" type="submit">
               <span>Quiero probar POST IA</span><i data-lucide="arrow-right"></i>
             </button>
             <p class="form-note">Usaremos tus datos únicamente para contactarte sobre POST IA.</p>
@@ -466,9 +426,12 @@
     </main>
 
     <footer class="site-footer">
-      <div class="section-shell footer-grid">
-        <div><a class="brand footer-brand" href="#inicio"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span><span class="brand-word">POST<em>IA</em></span></a><p>Tu negocio. Su siguiente nivel.<br />Marketing con IA para MYPES del Perú.</p></div>
-        <nav><strong>Explorar</strong><a href="#como-funciona">Cómo funciona</a><a href="#modulos">Módulos</a><a href="#demo">Demo</a><a href="#registro">Acceso anticipado</a></nav>
+      <div class="shell footer-grid">
+        <div>
+          <a class="brand" href="#inicio"><span class="brand-mark" data-isotipo></span><span class="brand-word">POST <em>IA</em></span></a>
+          <p>De una foto a tu próxima campaña.<br />Con tu esencia. Bajo tu control.</p>
+        </div>
+        <nav aria-label="Explorar"><strong>Explorar</strong><a href="#en-accion">La app</a><a href="#modulos">Módulos</a><a href="#esencia">Tú decides</a><a href="#registro">Acceso anticipado</a></nav>
         <nav class="social-nav" aria-label="Redes sociales">
           <strong>Redes</strong>
           <a data-social="instagram" target="_blank" rel="noopener">Instagram</a>
@@ -478,14 +441,19 @@
           <a class="social-fallback" href="#registro">Únete a la beta</a>
         </nav>
       </div>
-      <div class="section-shell footer-bottom"><span>© 2026 POST IA</span><span>Creado para las MYPES que siguen avanzando.</span></div>
+      <div class="shell footer-bottom"><span>© 2026 POST IA</span><span>Hecho en Perú para las MYPES que siguen avanzando.</span></div>
     </footer>
 
     <a class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" hidden>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83s.7-2 .96-2.28c.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.48.24.56.8 1.94.86 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.28.14.44.11.6-.07.16-.18.69-.8.88-1.08.18-.27.36-.23.62-.14.25.09 1.6.76 1.88.9.27.13.45.2.52.32.07.11.07.66-.17 1.33Z"/></svg>
     </a>
 
+    <!-- Polo coral (producto de ejemplo del manual de identidad) -->
+    <template id="productTpl">
+      <svg viewBox="0 0 400 430" role="img" aria-label="Polo coral"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#FF8A70"/><stop offset=".55" stop-color="#F0654B"/><stop offset="1" stop-color="#C9472F"/></linearGradient><linearGradient id="pc" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFA08A"/><stop offset="1" stop-color="#E45A40"/></linearGradient></defs><path fill="url(#pg)" d="M152 40 C120 48 104 56 92 64 L34 118 C28 124 30 132 36 138 L66 176 C70 181 78 182 83 177 L110 152 L108 396 C108 404 114 410 122 410 L278 410 C286 410 292 404 292 396 L290 152 L317 177 C322 182 330 181 334 176 L364 138 C370 132 372 124 366 118 L308 64 C296 56 280 48 248 40 C236 58 218 70 200 70 C182 70 164 58 152 40Z"/><path fill="#00000022" d="M110 152 L112 230 C116 200 118 175 110 152Z M290 152 L288 230 C284 200 282 175 290 152Z"/><path fill="#00000018" d="M150 260 C170 300 160 360 175 405 L150 408 C140 360 150 300 150 260Z M250 250 C238 300 252 350 236 406 L262 406 C266 350 256 300 250 250Z"/><rect x="190" y="70" width="20" height="96" rx="3" fill="#E4583F"/><circle cx="200" cy="96" r="4.5" fill="#FBE3DC"/><circle cx="200" cy="124" r="4.5" fill="#FBE3DC"/><circle cx="200" cy="150" r="4.5" fill="#FBE3DC"/><path fill="url(#pc)" d="M152 40 C164 58 182 70 200 72 L178 108 C166 96 150 74 140 50Z"/><path fill="url(#pc)" d="M248 40 C236 58 218 70 200 72 L222 108 C234 96 250 74 260 50Z"/></svg>
+    </template>
+
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=202610301911"></script>
+    <script src="script.js?v=202610301924"></script>
   </body>
 </html>
